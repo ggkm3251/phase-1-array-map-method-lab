@@ -12,5 +12,23 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map((string) => {
+    const sentence = string.split(" ");
+    const capitalizedSentence= sentence.map(
+      (sentence2) => sentence2.charAt(0).toUpperCase() + sentence2.slice(1)
+    );
+    const result = capitalizedSentence.join(" ");
+    return result;
+  });
+};
+
+/*const titleCased = () => {
+  return tutorials.map((line) => {
+    const tokens = line.split(" ");
+    const capitalizedTokens = tokens.map(
+      (token) => token.charAt(0).toUpperCase() + token.slice(1)
+    );
+    const response = capitalizedTokens.join(" ");
+    return response;
+  });
+};*/
